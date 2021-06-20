@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "773858006227",
+    "firebase_url": "https://viewcoursesdata-default-rtdb.firebaseio.com",
+    "project_id": "viewcoursesdata",
+    "storage_bucket": "viewcoursesdata.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773858006227:android:0e0d348f6157181ae73026",
+        "android_client_info": {
+          "package_name": "com.example.view_only_courses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773858006227-rscn3b5dru85v9o5h0s8ocv35fe1lt8h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoCyN835FJ_hautUnwXqXE15sedkunAdI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773858006227-rscn3b5dru85v9o5h0s8ocv35fe1lt8h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
