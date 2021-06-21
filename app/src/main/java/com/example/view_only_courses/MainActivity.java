@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.SearchView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     myadapter adapter;
     DatabaseReference databaseReference;
     ArrayList<model>arrayList;
+    FloatingActionButton addvideo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         recview=(RecyclerView)findViewById(R.id.recview);
         databaseReference=FirebaseDatabase.getInstance().getReference().child("students");
         recview.setLayoutManager(new LinearLayoutManager(this));
+        addvideo=(FloatingActionButton)findViewById(R.id.floatingActionButton);
+        addvideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Create_new_courses.class));
+            }
+        });
 
         arrayList=new ArrayList<>();
 
