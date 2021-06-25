@@ -1,43 +1,42 @@
 package com.example.view_only_courses;
 
-public class model
-{
+public class model {
     public model() {
     }
 
-    String course,email,name,purl,video_url,pdf_url;
+    String made_by, desc, title, purl,video_url,pdf_url;
 
-    public model(String course, String email, String name, String purl, String video_url, String pdf_url) {
-        this.course = course;
-        this.email = email;
-        this.name = name;
+    public model(String made_by, String desc, String title, String purl, String video_url, String pdf_url) {
+        this.made_by = made_by;
+        this.desc = desc;
+        this.title = title;
         this.purl = purl;
         this.video_url = video_url;
         this.pdf_url = pdf_url;
     }
 
-    public String getCourse() {
-        return course;
+    public String getMade_by() {
+        return made_by;
     }
 
-    public void setCourse(String course) {
-        this.course = course;
+    public void setMade_by(String made_by) {
+        this.made_by = made_by;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getPurl() {

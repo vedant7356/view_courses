@@ -31,6 +31,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewHolder>{
         this.list = list;
     }
 
+
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -42,18 +43,18 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewHolder>{
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         model mo=list.get(position);
-        holder.name.setText(mo.getName());
-        holder.course.setText(mo.getCourse());
-        holder.email.setText(mo.getEmail());
+        holder.name.setText(mo.getTitle());
+        holder.course.setText(mo.getMade_by());
+        holder.email.setText(mo.getDesc());
         Glide.with(holder.img.getContext()).load(mo.getPurl()).into(holder.img);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(v.getContext(),Description.class);
-                intent.putExtra("name",mo.getName());
-                intent.putExtra("course",mo.getCourse());
-                intent.putExtra("email",mo.getEmail());
+                intent.putExtra("name",mo.getTitle());
+                intent.putExtra("course",mo.getMade_by());
+                intent.putExtra("email",mo.getDesc());
                 intent.putExtra("video_url",mo.getVideo_url());
                 intent.putExtra("pdf_url",mo.getPdf_url());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

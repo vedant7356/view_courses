@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Create_new_courses">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -18,12 +27,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002" />
+        app:layout_constraintVertical_bias="0.002"
+        android:rotation="180"/>
 
     </FrameLayout>
 
     <EditText
-        android:id="@+id/editTextTextMultiLine3"
+        android:id="@+id/Enter_desc_here"
         android:layout_width="335dp"
         android:layout_height="55dp"
         android:ems="10"
@@ -36,19 +46,19 @@
         app:layout_constraintTop_toBottomOf="@+id/browse"
         app:layout_constraintVertical_bias="0.459" />
 
-    <Button
-        android:id="@+id/browse"
-        android:layout_width="265dp"
-        android:layout_height="63dp"
-        android:text="Browse Video"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438" />
+            <Button
+                android:id="@+id/browse"
+                android:layout_width="265dp"
+                android:layout_height="63dp"
+                android:text="Browse Video"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.468" />
 
-    <Button
+            <Button
         android:id="@+id/upload"
         android:layout_width="355dp"
         android:layout_height="70dp"
@@ -58,11 +68,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_desc_here"
         app:layout_constraintVertical_bias="0.186" />
 
     <Button
-        android:id="@+id/upload2"
+        android:id="@+id/upload_pdf"
         android:layout_width="355dp"
         android:layout_height="70dp"
         android:layout_marginBottom="4dp"
@@ -74,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/upload" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/Enter_title_here"
         android:layout_width="337dp"
         android:layout_height="47dp"
         android:ems="10"
@@ -89,7 +99,7 @@
         app:layout_constraintVertical_bias="0.054" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/Enter_username_here"
         android:layout_width="334dp"
         android:layout_height="57dp"
         android:ems="10"
@@ -103,5 +113,8 @@
         app:layout_constraintTop_toBottomOf="@+id/browse"
         app:layout_constraintVertical_bias="0.238" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -98,7 +99,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void processsearch(String s)
     {
-        String query=s.toLowerCase();
-        Query fireb=databaseReference.orderByChild("name").startAt(query).endAt(query+"\uf8ff");
+        ArrayList<model>list=new ArrayList<>();
+        for (model ob : arrayList){
+
+            if (ob.getTitle().toLowerCase().contains(s.toLowerCase())){
+                list.add(ob);
+            }
+
+        }
+        myadapter myadapter=new myadapter(this,list);
+        recview.setAdapter(myadapter);
+
     }
 }
