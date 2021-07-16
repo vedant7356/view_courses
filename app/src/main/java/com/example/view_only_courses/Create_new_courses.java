@@ -51,7 +51,6 @@ public class Create_new_courses extends AppCompatActivity {
         setContentView(R.layout.activity_create_new_courses);
         storageReference= FirebaseStorage.getInstance().getReference();
         databaseReference= FirebaseDatabase.getInstance().getReference().child("students");
-
         image="https://firebasestorage.googleapis.com/v0/b/viewcoursesdata.appspot.com/o/Pictures%2Fprofile.jpg?alt=media&token=bff270bf-a7b9-4ab1-bea2-07625ddbb427";
         et1=(EditText)findViewById(R.id.Enter_title_here);
         et2=(EditText)findViewById(R.id.Enter_username_here);
